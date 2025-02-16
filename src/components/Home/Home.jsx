@@ -27,8 +27,10 @@ function Home() {
       setTimeout(() => setShowPopup(false), 2000);
       return;
     }
-    const route = toolName.toLowerCase().replace(/\s+/g, '');
-    navigate(`/tools/${route}`);
+    
+    // Simplified route generation
+    const toolRoute = toolName.toLowerCase().replace(/\s+/g, '');
+    navigate(`/tools/${toolRoute}`);
   };
 
   useGSAP(() => {

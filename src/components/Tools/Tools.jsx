@@ -52,16 +52,15 @@ function Tools() {
   }
 
   const navigateToTool = (toolName) => {
-
-    // Baadme remove krna hai issee
-
     if (toolName.toLowerCase() === 'image app' || toolName.toLowerCase() === 'todo app') {
       setShowPopup(true);
-      setTimeout(() => setShowPopup(false), 2000); // Hide popup after 2 seconds
+      setTimeout(() => setShowPopup(false), 2000);
       return;
     }
-    const route = toolName.toLowerCase().replace(/\s+/g, '')
-    navigate(`/tools/${route}`)
+    
+    // Simplified route generation
+    const toolRoute = toolName.toLowerCase().replace(/\s+/g, '');
+    navigate(toolRoute);
   }
 
   return (
